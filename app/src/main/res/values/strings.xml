@@ -27,4 +27,15 @@
     <string name="date_pattern">dd/MM/yyyy</string>
     <string name="timezone_utc">UTC</string>
 
+    <string-array name="experience_options">
+        <item>Kurang dari 1 Tahun</item>
+        <item>1 - 3 Tahun</item>
+        <item>Lebih dari 3 Tahun</item>
+    </string-array>
+
+    <string-array name="skill_options">
+        <item>Android</item>
+        <item>UI/UX</item>
+        <item>Web</item>
+    </string-array>
 </resources>
