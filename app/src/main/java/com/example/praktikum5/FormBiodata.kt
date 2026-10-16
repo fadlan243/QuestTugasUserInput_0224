@@ -92,3 +92,26 @@ fun FormBiodataScreen() {
     val experienceOptions = stringArrayResource(R.array.experience_options)
     val skillOptions = stringArrayResource(R.array.skill_options)
     val selectedSkills = remember { mutableStateListOf<String>() }
+
+    val datePattern = stringResource(R.string.date_pattern)
+    val timezoneUtc = stringResource(R.string.timezone_utc)
+    val dateFormatter = remember(datePattern, timezoneUtc) {
+        SimpleDateFormat(datePattern, Locale.getDefault()).apply {
+            timeZone = TimeZone.getTimeZone(timezoneUtc)
+        }
+    }
+
+    val isFormValid = firstName.isNotBlank() && lastName.isNotBlank() &&
+            email.isNotBlank() && birthDate.isNotBlank() &&
+            experience.isNotBlank() && selectedSkills.isNotEmpty()
+
+    val weightEqual = floatRes(R.dimen.weight_equal)
+    val resultDurationMs = integerResource(R.integer.result_display_duration_ms)
+
+    // Hasil Proceed otomatis hilang setelah durasi di integers.xml (5 detik)
+    LaunchedEffect(showResult) {
+        if (showResult) {
+            delay(resultDurationMs.toLong())
+            showResult = false
+        }
+    }
