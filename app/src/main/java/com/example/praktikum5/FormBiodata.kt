@@ -388,3 +388,48 @@ fun FormBiodataScreen() {
     }
 }
 
+/* ---------- Komponen reusable ---------- */
+
+@Composable
+private fun cardShape() = RoundedCornerShape(
+    topStart = dimensionResource(R.dimen.corner_card_top),
+    topEnd = dimensionResource(R.dimen.corner_card_top),
+    bottomStart = dimensionResource(R.dimen.corner_card_bottom),
+    bottomEnd = dimensionResource(R.dimen.corner_card_bottom)
+)
+
+@Composable
+private fun BiodataField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    placeholder: String,
+    modifier: Modifier = Modifier,
+    readOnly: Boolean = false,
+    trailingIcon: @Composable (() -> Unit)? = null
+) {
+    OutlinedTextField(
+        value = value,
+        onValueChange = onValueChange,
+        readOnly = readOnly,
+        singleLine = true,
+        placeholder = {
+            Text(
+                text = placeholder,
+                fontSize = spRes(R.dimen.text_field)
+            )
+        },
+        textStyle = LocalTextStyle.current.copy(fontSize = spRes(R.dimen.text_field)),
+        trailingIcon = trailingIcon,
+        shape = RoundedCornerShape(dimensionResource(R.dimen.corner_field)),
+        colors = OutlinedTextFieldDefaults.colors(
+            focusedBorderColor = colorResource(R.color.field_border_focused),
+            unfocusedBorderColor = colorResource(R.color.field_border),
+            focusedTextColor = colorResource(R.color.field_text),
+            unfocusedTextColor = colorResource(R.color.field_text),
+            focusedPlaceholderColor = colorResource(R.color.field_placeholder),
+            unfocusedPlaceholderColor = colorResource(R.color.field_placeholder),
+            cursorColor = colorResource(R.color.field_border_focused)
+        ),
+        modifier = modifier
+    )
+}
