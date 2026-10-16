@@ -73,3 +73,22 @@ private fun floatRes(@DimenRes id: Int): Float =
 @Composable
 private fun spRes(@DimenRes id: Int): TextUnit = dimensionResource(id).value.sp
 
+/* ---------- Screen utama ---------- */
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormBiodataScreen() {
+    val empty = stringResource(R.string.empty_text)
+
+    var firstName by rememberSaveable { mutableStateOf(empty) }
+    var lastName by rememberSaveable { mutableStateOf(empty) }
+    var email by rememberSaveable { mutableStateOf(empty) }
+    var birthDate by rememberSaveable { mutableStateOf(empty) }
+    var experience by rememberSaveable { mutableStateOf(empty) }
+    var showDatePicker by remember { mutableStateOf(false) }
+    var showDropdown by remember { mutableStateOf(false) }
+    var showResult by remember { mutableStateOf(false) }
+
+    val experienceOptions = stringArrayResource(R.array.experience_options)
+    val skillOptions = stringArrayResource(R.array.skill_options)
+    val selectedSkills = remember { mutableStateListOf<String>() }
