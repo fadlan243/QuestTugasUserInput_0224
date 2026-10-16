@@ -19,4 +19,12 @@
     <string name="dialog_cancel">Batal</string>
     <string name="dialog_close">Tutup</string>
 
+    <string name="result_title">Data Biodata Anda</string>
+    <string name="result_message">Nama: %1$s %2$s\nEmail: %3$s\nTgl Lahir: %4$s\nExperience: %5$s\nSkill: %6$s</string>
+    <string name="skill_separator">, </string>
+
+    <string name="empty_text"></string>
+    <string name="date_pattern">dd/MM/yyyy</string>
+    <string name="timezone_utc">UTC</string>
+
 </resources>
