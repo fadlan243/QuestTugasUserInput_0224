@@ -8,4 +8,13 @@
     <dimen name="corner_field">16dp</dimen>
     <dimen name="corner_button">16dp</dimen>
 
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_field">12dp</dimen>
+    <dimen name="spacing_section">16dp</dimen>
+    <dimen name="spacing_title_bottom">20dp</dimen>
+    <dimen name="spacing_before_button">20dp</dimen>
+
+    <dimen name="border_width">1dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+
 </resources>
