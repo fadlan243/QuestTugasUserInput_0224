@@ -1,0 +1,11 @@
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="screen_background">#FFFAF8FF</color>
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="title_purple">#FF673AB7</color>
+    <color name="subtitle_gray">#FF8A8A8A</color>
+    <color name="field_border">#FF79747E</color>
+
+</resources>
