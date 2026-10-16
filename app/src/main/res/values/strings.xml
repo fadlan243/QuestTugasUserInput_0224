@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FormBiodata</string>
+
+    <string name="form_title">Form Biodata</string>
+    <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="hint_first_name">Nama Depan</string>
+    <string name="hint_last_name">Nama Belakang</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_birth_date">Tgl Lahir</string>
+    <string name="hint_experience">Experience</string>
+    <string name="label_skill">Pilih Skill Anda :</string>
+    <string name="button_proceed">Proceed</string>
+
+</resources>
