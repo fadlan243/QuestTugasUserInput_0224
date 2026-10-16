@@ -115,3 +115,17 @@ fun FormBiodataScreen() {
             showResult = false
         }
     }
+
+    Scaffold(containerColor = colorResource(R.color.screen_background)) { innerPadding ->
+        Box(modifier = Modifier.fillMaxSize()) {
+
+            // Gambar header di belakang
+            Image(
+                painter = painterResource(R.drawable.bg_neon_spider),
+                contentDescription = stringResource(R.string.cd_header_image),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(floatRes(R.dimen.header_height_fraction))
+            )
+
