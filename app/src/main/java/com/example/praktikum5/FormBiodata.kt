@@ -365,3 +365,26 @@ fun FormBiodataScreen() {
         )
     }
 
+    if (showDatePicker) {
+        val datePickerState = rememberDatePickerState()
+        DatePickerDialog(
+            onDismissRequest = { showDatePicker = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    datePickerState.selectedDateMillis?.let {
+                        birthDate = dateFormatter.format(Date(it))
+                    }
+                    showDatePicker = false
+                }) { Text(stringResource(R.string.dialog_ok)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDatePicker = false }) {
+                    Text(stringResource(R.string.dialog_cancel))
+                }
+            }
+        ) {
+            DatePicker(state = datePickerState)
+        }
+    }
+}
+
