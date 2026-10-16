@@ -63,3 +63,13 @@ import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 import kotlinx.coroutines.delay
+
+/* ---------- Helper pembaca resources ---------- */
+
+@Composable
+private fun floatRes(@DimenRes id: Int): Float =
+    ResourcesCompat.getFloat(LocalContext.current.resources, id)
+
+@Composable
+private fun spRes(@DimenRes id: Int): TextUnit = dimensionResource(id).value.sp
+
