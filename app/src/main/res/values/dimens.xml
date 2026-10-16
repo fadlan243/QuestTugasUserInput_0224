@@ -17,4 +17,14 @@
     <dimen name="border_width">1dp</dimen>
     <dimen name="button_height">48dp</dimen>
 
+    <!-- nilai angka, dikonversi ke sp lewat helper spRes() -->
+    <dimen name="text_title">28dp</dimen>
+    <dimen name="text_subtitle">10dp</dimen>
+    <dimen name="text_field">12dp</dimen>
+    <dimen name="text_label">12dp</dimen>
+    <dimen name="text_skill">11dp</dimen>
+    <dimen name="text_button">12dp</dimen>
+
+    <item name="header_height_fraction" format="float" type="dimen">0.45</item>
+    <item name="weight_equal" format="float" type="dimen">1</item>
 </resources>
