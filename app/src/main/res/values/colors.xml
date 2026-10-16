@@ -15,5 +15,9 @@
     <color name="checkbox_checked">#FF673AB7</color>
     <color name="checkbox_unchecked">#FF49454F</color>
     <color name="checkbox_checkmark">#FFFFFFFF</color>
-
+    <color name="button_enabled_container">#FF673AB7</color>
+    <color name="button_enabled_content">#FFFFFFFF</color>
+    <color name="button_disabled_container">#FFE6E6E6</color>
+    <color name="button_disabled_content">#FFFFFFFF</color>
+    <color name="card_shadow">#FF000000</color>
 </resources>
