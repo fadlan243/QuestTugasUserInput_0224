@@ -7,5 +7,13 @@
     <color name="title_purple">#FF673AB7</color>
     <color name="subtitle_gray">#FF8A8A8A</color>
     <color name="field_border">#FF79747E</color>
+    <color name="field_border_focused">#FF673AB7</color>
+    <color name="field_text">#FF49454F</color>
+    <color name="field_placeholder">#FF49454F</color>
+    <color name="field_icon">#FF49454F</color>
+    <color name="skill_label">#FF000000</color>
+    <color name="checkbox_checked">#FF673AB7</color>
+    <color name="checkbox_unchecked">#FF49454F</color>
+    <color name="checkbox_checkmark">#FFFFFFFF</color>
 
 </resources>
