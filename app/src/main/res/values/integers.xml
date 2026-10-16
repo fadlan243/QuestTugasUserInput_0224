@@ -1,0 +1,3 @@
+<resources>
+    <integer name="result_display_duration_ms">5000</integer>
+</resources>
