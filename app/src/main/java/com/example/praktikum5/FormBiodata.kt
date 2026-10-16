@@ -333,3 +333,35 @@ fun FormBiodataScreen() {
         }
     }
 
+    // Hasil Proceed: tampil 5 detik lalu hilang otomatis
+    if (showResult) {
+        AlertDialog(
+            onDismissRequest = { showResult = false },
+            containerColor = colorResource(R.color.card_background),
+            titleContentColor = colorResource(R.color.title_purple),
+            textContentColor = colorResource(R.color.field_text),
+            title = { Text(stringResource(R.string.result_title)) },
+            text = {
+                Text(
+                    stringResource(
+                        R.string.result_message,
+                        firstName,
+                        lastName,
+                        email,
+                        birthDate,
+                        experience,
+                        selectedSkills.joinToString(stringResource(R.string.skill_separator))
+                    )
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = { showResult = false }) {
+                    Text(
+                        text = stringResource(R.string.dialog_close),
+                        color = colorResource(R.color.title_purple)
+                    )
+                }
+            }
+        )
+    }
+
