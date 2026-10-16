@@ -11,4 +11,12 @@
     <string name="label_skill">Pilih Skill Anda :</string>
     <string name="button_proceed">Proceed</string>
 
+    <string name="cd_header_image">Gambar neon laba-laba</string>
+    <string name="cd_pick_date">Pilih tanggal lahir</string>
+    <string name="cd_open_dropdown">Buka pilihan experience</string>
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Batal</string>
+    <string name="dialog_close">Tutup</string>
+
 </resources>
