@@ -206,3 +206,64 @@ fun FormBiodataScreen() {
 
                         Spacer(Modifier.height(dimensionResource(R.dimen.spacing_field)))
 
+                        // Tgl lahir + experience
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(
+                                dimensionResource(R.dimen.spacing_field)
+                            )
+                        ) {
+                            BiodataField(
+                                value = birthDate,
+                                onValueChange = {},
+                                placeholder = stringResource(R.string.hint_birth_date),
+                                readOnly = true,
+                                trailingIcon = {
+                                    IconButton(onClick = { showDatePicker = true }) {
+                                        Icon(
+                                            painter = painterResource(R.drawable.ic_calendar),
+                                            contentDescription = stringResource(R.string.cd_pick_date),
+                                            tint = colorResource(R.color.field_icon)
+                                        )
+                                    }
+                                },
+                                modifier = Modifier.weight(weightEqual)
+                            )
+
+                            Box(modifier = Modifier.weight(weightEqual)) {
+                                BiodataField(
+                                    value = experience,
+                                    onValueChange = {},
+                                    placeholder = stringResource(R.string.hint_experience),
+                                    readOnly = true,
+                                    trailingIcon = {
+                                        Icon(
+                                            painter = painterResource(R.drawable.ic_arrow_drop_down),
+                                            contentDescription = stringResource(R.string.cd_open_dropdown),
+                                            tint = colorResource(R.color.field_icon)
+                                        )
+                                    },
+                                    modifier = Modifier.fillMaxWidth()
+                                )
+                                Box(
+                                    modifier = Modifier
+                                        .matchParentSize()
+                                        .clickable { showDropdown = true }
+                                )
+                                DropdownMenu(
+                                    expanded = showDropdown,
+                                    onDismissRequest = { showDropdown = false }
+                                ) {
+                                    experienceOptions.forEach { option ->
+                                        DropdownMenuItem(
+                                            text = { Text(option) },
+                                            onClick = {
+                                                experience = option
+                                                showDropdown = false
+                                            }
+                                        )
+                                    }
+                                }
+                            }
+                        }
+
+                        Spacer(Modifier.height(dimensionResource(R.dimen.spacing_section)))
