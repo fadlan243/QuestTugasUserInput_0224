@@ -267,3 +267,42 @@ fun FormBiodataScreen() {
                         }
 
                         Spacer(Modifier.height(dimensionResource(R.dimen.spacing_section)))
+
+                        // Skill
+                        Text(
+                            text = stringResource(R.string.label_skill),
+                            color = colorResource(R.color.skill_label),
+                            fontSize = spRes(R.dimen.text_label),
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            skillOptions.forEach { skill ->
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Checkbox(
+                                        checked = skill in selectedSkills,
+                                        onCheckedChange = { checked ->
+                                            if (checked) selectedSkills.add(skill)
+                                            else selectedSkills.remove(skill)
+                                        },
+                                        colors = CheckboxDefaults.colors(
+                                            checkedColor = colorResource(R.color.checkbox_checked),
+                                            uncheckedColor = colorResource(R.color.checkbox_unchecked),
+                                            checkmarkColor = colorResource(R.color.checkbox_checkmark)
+                                        )
+                                    )
+                                    Text(
+                                        text = skill,
+                                        color = colorResource(R.color.field_text),
+                                        fontSize = spRes(R.dimen.text_skill)
+                                    )
+                                }
+                            }
+                        }
+
+                        Spacer(Modifier.height(dimensionResource(R.dimen.spacing_before_button)))
+
