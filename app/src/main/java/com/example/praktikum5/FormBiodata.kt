@@ -129,3 +129,48 @@ fun FormBiodataScreen() {
                     .fillMaxHeight(floatRes(R.dimen.header_height_fraction))
             )
 
+            // Box yang MENGAPUNG di atas Scaffold
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(innerPadding)
+                    .padding(
+                        start = dimensionResource(R.dimen.card_margin_horizontal),
+                        end = dimensionResource(R.dimen.card_margin_horizontal),
+                        bottom = dimensionResource(R.dimen.card_margin_bottom)
+                    )
+                    .shadow(
+                        elevation = dimensionResource(R.dimen.card_elevation),
+                        shape = cardShape(),
+                        ambientColor = colorResource(R.color.card_shadow),
+                        spotColor = colorResource(R.color.card_shadow)
+                    )
+                    .fillMaxWidth()
+            ) {
+                Surface(
+                    shape = cardShape(),
+                    color = colorResource(R.color.card_background),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Column(
+                        modifier = Modifier.padding(dimensionResource(R.dimen.card_padding)),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = stringResource(R.string.form_title),
+                            color = colorResource(R.color.title_purple),
+                            fontSize = spRes(R.dimen.text_title),
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Center
+                        )
+                        Text(
+                            text = stringResource(R.string.form_subtitle),
+                            color = colorResource(R.color.subtitle_gray),
+                            fontSize = spRes(R.dimen.text_subtitle),
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(
+                                top = dimensionResource(R.dimen.spacing_small),
+                                bottom = dimensionResource(R.dimen.spacing_title_bottom)
+                            )
+                        )
+
